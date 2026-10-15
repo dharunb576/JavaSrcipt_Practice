@@ -1,0 +1,43 @@
+<body bgcolor="red<button>Change Colour...!!</button>">
+<center>
+<h2>
+    Guess the Number...!!
+</h2>
+
+<input id="in" placeholder="Enter the correct Number">
+
+<button onclick= "check()">Check</button>
+
+<p id="res">Guess the Correct NUM !!!</p>
+<h3 id="sco">Score : 10 </h3>
+
+<script>
+    var num = document.getElementById("in")
+    var res = document.getElementById("res")
+    var rand = Math.floor(Math.random()*10)+1
+    var scores = document.getElementById("sco")     //to change "Scores : 10" to other decreamented value
+    var tot_score = 10             //to set a variable for to show the decreament
+    function check()
+    {
+
+    var in_val = Number(num.value)
+    if(in_val == rand)
+        {
+            console.log("The Entered Num is Correct")
+            res.textContent="Hoorayy...!!! The num is right"
+            //alert("You Are Won")
+            
+        }
+    else{
+        console.log("The Entered NUM is Wrong")
+        res.textContent="Try Again..."
+        tot_score=tot_score - 1
+        scores.textContent = "Score : "+tot_score
+        //alert("Sorry You Lose")
+    }
+}
+
+//console.log(Math.floor(Math.random()*10)+1) 
+</script>
+</center>
+</body>

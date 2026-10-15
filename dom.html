@@ -1,0 +1,65 @@
+<!-- <p id="7">
+    hello java script
+</p>
+<script>
+    var para = document.getElementById("7") //getting element by ID
+    console.log(para.textContent)   //print only text in console
+
+    para.textContent= "heyyyy"  //change the written content
+</script> -->
+
+
+
+
+
+
+
+
+<!-- --------------Event Handling-------------
+
+<h1 id="3"> Hello World </h1>
+<button onclick = reset()>Change</button>
+<script>
+    var n = document.getElementById("3")
+    console.log(n.textContent)
+    function reset()
+    {
+        document.getElementById("3").textContent = "Bye World"
+    }
+</script> -->
+
+
+
+
+
+
+<!--ADDITION OF TWO NUMBERS -->
+
+
+<input id="n1" placeholder="Enter num1..">
+<input id="n2" placeholder="Enter num2..">
+
+<button onClick=add()>--Add--</button>
+<p id="result">Result: </p>
+
+<script>
+    var n1 = document.getElementById("n1")
+    var n2 = document.getElementById("n2")
+    var added = document.getElementById("result")
+
+
+    // console.log(n1.value)
+    // console.log(n2.value)   
+    
+    
+
+    function add()
+    {
+            var valnum1 = Number(n1.value)
+            var valnum2 = Number(n2.value)
+            var sol = valnum1+valnum2
+            //added.textContent=sol
+            added.textContent ="Result : "+sol
+
+    }
+</script>

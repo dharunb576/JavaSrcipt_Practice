@@ -1,0 +1,18 @@
+<body bgcolor="red">
+<center>
+    <h2>Live Type</h2>
+         <input id = "inbox" type="text" placeholder="just type it..." onkeypress ="update()">
+         <h3 id="res"></h3>
+
+         <script>
+            var inboxx = document.getElementById("inbox")
+            var ress = document.getElementById("res")
+            
+            function update()
+            {
+                ress.textContent = inboxx.value
+            }
+
+         </script>
+</center>
+</body>

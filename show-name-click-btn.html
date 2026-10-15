@@ -1,0 +1,43 @@
+<body bgcolor="red">
+    <center>
+
+        <!-- <h1 id="chn">CLICK THE BUTTON   </h1>
+        <button onclick="vik()">Vignesh</button>
+        <button onclick="tar()">Tarun</button>
+        <button onclick="dev()">Deva</button>
+
+        <script>
+            var chn = document.getElementById("chn")
+
+            function vik()
+            {
+                chn.textContent = "Vignesh"
+            }
+            function tar()
+            {
+                chn.textContent = "Tarun"
+            }
+            function dev()
+            {
+                chn.textContent = "Deva"
+            } 
+        </script>-->
+        
+        
+        
+        <!----      OR second way        --->
+
+        <h1 id = "chn">Name</h1>
+        <button onclick="update(event)">Vignesh</button>
+        <button onclick="update(event)">Tarun</button>
+        <button onclick="update(event)">Deva</button>
+
+        <script>
+            var chn = document.getElementById("chn")
+
+            function update(event){
+                chn.textContent = event.target.textContent
+            }
+        </script>
+    </center>
+</body>

@@ -1,0 +1,115 @@
+VARIABLES
+var--->global scope (use anywhere)
+let--->local scope
+const---> do not change if declared once
+
+
+var a = 10
+console.log(a) //op:10
+console.log(a++)//op:11
+console.log(a--)//op:9
+
+var a = 10
+b=a++
+c.l(b)//op:10
+b=a--
+c.l(b)//op:10
+
+var a=10
+b=++a
+c.l(b)//op:11
+b=--a
+c.l(b)//op:9
+
+
+
+--------------Event Handling-------------
+
+<h1 id="3"> Hello World </h1>
+<button onclick = reset()>Change</button>
+<script>
+    var n = document.getElementById("3")
+    console.log(n.textContent)
+    function reset()
+    {
+        document.getElementById("3").textContent = "Bye World"
+    }
+</script>
+
+
+
+<------------CONVERTING TEXT TO NUM--------------->
+
+var b = "56"
+var a = Number(b)
+
+
+var a = Math.random() //It gives random nums bet 0.00 to 0.9
+console.log(a*10)  //1.00 to 9.0009
+b= Math.floor(a*10)  // 1 to 9
+
+var a = Math.random() //It gives random nums bet 0.00 to 0.9
+//console.log(a*10)
+//console.log(Math.floor(a*10))
+b = a*1000
+console.log(Math.floor(b)+1)// here the ramdom nums generated from 1 to 1000
+
+
+Assignment:
+	A function can store in the variable
+
+function a()
+{
+return a
+}
+var b = a;
+
+Arrow Function:
+	Normally used for assigning single line functions
+let a = (n) => {return a}
+console.log(a(3))
+ 
+ 
+Call Back:
+	In this module, we turn the parameter into a funtion
+	We return the parameter given as new function
+Program:
+	let opera = (op,a,b) => op(a,b)
+	let add = (a,b) => a+b
+	let sub = (a,b) => a-b
+	console.log(opera(add,7,5))
+	
+Objects:
+	let ab = {} ----> object declaration
+
+
+Promise:
+	isHalwaThere = true
+
+function waitInQueue()
+{
+    return new Promise((resolve,reject)=>
+    {
+        setTimeout(()=> {
+            if(isHalwaThere)
+            {
+                console.log("Sema daa")
+                resolve("buy it")
+            }
+            else{
+                reject("Halwa Over")
+            }
+        },1000)
+    })
+}
+async function buyHalwa()
+{
+    try{
+        let res = await waitInQueue()
+    console.log(res)
+    }
+    catch(error){
+            console.log("Halwa Gaali")
+    }
+}
+buyHalwa()  
